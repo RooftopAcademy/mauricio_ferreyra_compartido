@@ -1,4 +1,4 @@
-# ABOUT OBJECT HERE
+# MAURICIO FERREYRA RIZZOLI
 
 ## Requeriments
 
