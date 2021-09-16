@@ -1,0 +1,255 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    /* margin: 0;
+    padding: 0; */
+    font-family: 'Roboto', sans-serif;
+    background-color: #f5f4f8;
+}
+a {
+    text-decoration: none;
+}
+
+.text-violet {
+    color: #18113c
+}
+.text-Light-purple {
+    color: rgb(92,87,118)
+}
+.text-light-gray-purple {
+    color: #a8a3b9;
+}
+.text-white {
+    color: #fff;
+}
+.m-0 {
+    margin: 0;
+}
+.my-1 {
+    margin-top: 6px;
+    margin-bottom: 6px;
+}
+.my-2 {
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
+.mt-2 {
+    margin-top: 12px;
+}
+.w-100 {
+    width: 100%;
+}
+.d-flex {
+    display: flex;
+}
+.align-items-center {
+    align-items: center;
+}
+
+
+/* Estilos del Navbar */
+
+.navigator{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 20px;
+    background: #ffff;
+}
+.navigator-conteiner {
+    display: flex;
+    align-items: center; 
+}
+.navigator-conteiner-link {
+    display: flex;
+    align-items: center; 
+}
+.navigator-conteiner-desktop {
+    display: none;
+}
+.navigator-conteiner-menu {
+    display: flex;
+    margin: 0;
+    /* padding: 0 0 0 15px; */
+}
+li {
+    list-style: none;
+}
+.logo:hover {
+    cursor: pointer;
+}
+.nav-link {
+    margin: 5px 10px;
+}
+.nav-link:hover {
+    cursor: pointer;
+    color: #754ffe;
+}
+.form-search {
+    display: flex;
+    align-items: center;
+}
+.form-search .lupa {
+    position: absolute;
+    padding-left: 10px;
+}
+.form-search .button-search{
+    padding: .75rem 2rem;
+    border: 1px solid #e8e7ed;
+    border-radius: 5px;
+    background-color: #fff;
+}
+.notification {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f5f4f8;
+    margin-right: 10px;
+    /* padding: 14px; */
+    width: 2.8rem;
+    height: 2.8rem;
+    border-radius: 50%;
+    border: 1px solid #f5f4f8
+}
+.notification:hover .bell, .notification:hover {
+    cursor: pointer;
+    color:rgb(117, 79, 254)
+}
+.perfil {
+    border-radius: 50%;
+}
+.perfil:hover, .menu-hamburgesa:hover {
+    cursor: pointer;
+}
+.menu-hamburgesa {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+    padding: .5rem;
+    border: 1px solid #754ffe;
+    border-radius: 5px;
+    background-color: #fff;
+}
+.icon-bar {
+    height: 2px;
+    width: 20px;
+    background-color: rgb(117, 79, 254);
+    margin: 2px 0
+}
+/* Fin de estilos del Navbar */
+
+.inicio {
+    background-color: rgb(117, 79, 254);
+    width: 100%;
+}
+.conteiner-welcome {
+    display: flex;
+    flex-direction: column;
+    width: 95%;
+    margin: auto;
+}
+.estrellas {
+    color: rgb(255,170,70);
+}
+.img-card {
+    width: 100%;
+    border-radius: 10px
+}
+.button {
+    padding: 1rem 1.25rem;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    font-weight: 600;
+    font-size: .9rem;
+}
+.button:hover {
+    cursor: pointer;
+}
+
+.btn-success {
+    color: #fff;
+    background-color: #19cb98;
+    border-color: #19cb98;
+}.btn-success:hover {
+    color: #fff;
+    background-color: #15ad81;
+    border-color: #14a27a;
+}
+
+
+
+.m {
+    display: none;
+    position: absolute;
+    width: 150px;
+    /* margin-left: -31px; */
+    right: 0;
+    text-align: center;
+    background: #fff;
+    margin-right: 15px;
+}
+.m ul {
+    padding: 0;
+    width: 100%;
+    /* margin: 0; */
+}
+.m-item {
+    padding: 6px 0;
+    /* width: 100%; */
+}
+.m-item:hover {
+    background-color: #a8a3b9;
+}
+.m-item-link{
+    text-decoration: none;
+}
+#btn-menu{
+    /* margin: 0; */
+    display: none;
+}
+
+#btn-menu:checked ~ .m {
+    display: flex;
+    justify-content: center;
+}
+.label-btn-menu{
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+    padding: .5rem;
+    border: 1px solid #754ffe;
+    border-radius: 5px;
+    background-color: #fff;
+}
+.label-btn-menu:hover {
+    cursor: pointer;
+}
+
+.prueba {
+    width: 225px;
+    /* position: fixed; */
+    background: rgb(117, 79, 254);
+}
+
+@keyframes aparicion {
+    0% {width: 0%}
+    100% {width: 100%}
+}
+
+
+@media (min-width: 1024px) {
+    .navigator-conteiner-desktop {
+        display: flex;
+    }
+    .menu-hamburgesa {
+        display: none;
+    }
+    .label-btn-menu {
+        display: none;
+    }
+    
+}

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="/style/app.css">
+    <link rel="stylesheet" href="/style/login.css">
+    <script src="/script/login.js" defer></script>
+    <title>Login</title>
+</head>
+<body>
+    <div class="conteiner d-flex">
+        <div class="conteiner-login">
+            <div class="conteiner-login-encabezado">
+                <img class="logo" src="https://codescandy.com/geeks-bootstrap-5/assets/images/brand/logo/logo.svg" alt="">
+            </div>
+            <div class="conteiner-login-body">
+                <form id="login" action="/index.html">
+                    <div class="control-form">
+                        <!-- <label for="username">Username</label> -->
+                        <input class="input" type="text" name="username" placeholder="Username">
+                    </div>
+                    <div class="control-form">
+                        <!-- <label for="password">Password</label> -->
+                        <input class="input" type="password" name="password" placeholder="password">
+                    </div>
+                    <input name="enviar" type="submit" class="button btn-success w-100 mt-2" value="Log in">
+                </form>
+            </div>
+        </div>
+    </div>
+    <div id="msg-error" class="conteiner-error">
+        <p>Error: username or password invalid</p>
+    </div>
+</body>
+</html>
