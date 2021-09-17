@@ -9,6 +9,17 @@ class Course {
         this.price = Number
         this.video = new Video
         this.points = Number
+        this.views = Number
+        this.photo_tutor = String
+        this.name_tutor = String
+    }
+
+    setId(n) {
+        this.id = n
+    }
+
+    getId() {
+        return this.id
     }
 
     setName(n) {
@@ -73,6 +84,30 @@ class Course {
 
     getVideo() {
         return this.video
+    }
+
+    setViews(n) {
+        this.views = n
+    }
+
+    getViews(){
+        return this.views
+    }
+
+    setPhotoTutor(n) {
+        this.photo_tutor = n
+    }
+
+    getPhotoTutor() {
+        return this.photo_tutor
+    }
+
+    setNameTutor(n) {
+        this.name_tutor = n
+    }
+
+    getNameTutor() {
+        return this.name_tutor
     }
 
 }
