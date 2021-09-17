@@ -12,7 +12,6 @@ let courses = [
 const recomended = document.getElementById('recomended')
 
 courses.forEach(element => {
-    console.log(element)
     recomended.innerHTML += `
     <a href="${element.detalle}">
         <div class="card">
