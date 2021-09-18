@@ -1,7 +1,7 @@
 function courseItem(curso) {
     return `
-    <a href="${curso.description}">
-        <div class="card">
+    <a class="" href="./detalleProducto.html">
+        <div class="card js-card-course" data-course-id="${curso.id}">
             <div>
                 <img class="img-card" src="${curso.image}" alt="">
             </div>

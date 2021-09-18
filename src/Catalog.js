@@ -12,9 +12,8 @@ class Catalog {
     }
 
     findById(id) {
-        return this.products.find(course => {
+        return this.courses.find(course => {
             return course.id == id
         })
     }
-
 }
