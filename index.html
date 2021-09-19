@@ -8,6 +8,16 @@
     <link rel="stylesheet" href="./style/app.css">
     <link rel="stylesheet" href="./style/index.css">
 
+    <script src="src/views/courseItem.js" defer></script>
+    <script src="src/views/headDetailCourse.js" defer></script>
+    
+    <script src="src/Store.js" defer></script>
+    <script src="src/Course.js" defer></script>
+    <script src="src/User.js" defer></script>
+    <script src="src/Video.js" defer></script>
+    <script src="src/Catalog.js" defer></script>
+    <script src="src/App.js" defer></script>
+    
     <script src="script/index.js" defer></script>
 
     <title>Listado</title>
@@ -137,187 +147,7 @@
                 <div class="conteiner-products">
                     <h2 class="text-violet lista-title">Recommended to you</h2>
                     <div id="recomended" class="lista">
-                        <!-- <a href="./detalleProducto.html">
-                            <div class="card">
-                                <div>
-                                    <img class="img-card" src="https://codescandy.com/geeks-bootstrap-5/assets/images/course/course-python.jpg" alt="">
-                                </div>
-                    
-                                <div class="card-body">
-                                    <h4 class="text-violet"><a class="card-body-title" href="./detalleProducto.html">The Python Course: build web application</a></h4>
-                                    <div class="text-Light-purple card-body-detail">
-                                        <span>
-                                            <i class="far fa-clock"></i>
-                                        </span>
-                                        <p class="card-body-detail-time">2h 30m</p>
-                                        <span class="level">
-                                            <i class="fas fa-signal"></i>
-                                        </span>
-                                        <p>Intermediate</p>
-                                    </div>
-                                    <div>
-                                        <span class="estrellas">
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                            4.5 
-                                        </span> <p class="text-Light-purple" style="margin-top: 15px;">(13,245)</p>        
-                                    </div>
-                                </div>
-                                <div class="card-footer">
-                                    <div class="profesor">
-                                        <div>
-                                            <img src="https://codescandy.com/geeks-bootstrap-5/assets/images/avatar/avatar-4.jpg" width="25" alt="" style="border-radius: 50%;">
-                                        </div>
-                                        <p>Claire Robertson</p>
-                                    </div>
-                                    <div>
-                                        <span>
-                                            <i class="far fa-bookmark"></i>
-                                        </span>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-        
-                        <a href="./detalleProducto.html">
-                            <div class="card">
-                                <div>
-                                    <img class="img-card" src="https://codescandy.com/geeks-bootstrap-5/assets/images/course/course-python.jpg" alt="">
-                                </div>
-                    
-                                <div class="card-body">
-                                    <h4 class="text-violet"><a class="card-body-title" href="./detalleProducto.html">The Python Course: build web application</a></h4>
-                                    <div class="text-Light-purple card-body-detail">
-                                        <span>
-                                            <i class="far fa-clock"></i>
-                                        </span>
-                                        <p class="card-body-detail-time">2h 30m</p>
-                                        <span class="level">
-                                            <i class="fas fa-signal"></i>
-                                        </span>
-                                        <p>Intermediate</p>
-                                    </div>
-                                    <div>
-                                        <span class="estrellas">
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                            4.5 
-                                        </span> <p class="text-Light-purple" style="margin-top: 15px;">(13,245)</p>        
-                                    </div>
-                                </div>
-                                <div class="card-footer">
-                                    <div class="profesor">
-                                        <div>
-                                            <img src="https://codescandy.com/geeks-bootstrap-5/assets/images/avatar/avatar-4.jpg" width="25" alt="" style="border-radius: 50%;">
-                                        </div>
-                                        <p>Claire Robertson</p>
-                                    </div>
-                                    <div>
-                                        <span>
-                                            <i class="far fa-bookmark"></i>
-                                        </span>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-        
-                        <a href="./detalleProducto.html">
-                            <div class="card">
-                                <div>
-                                    <img class="img-card" src="https://codescandy.com/geeks-bootstrap-5/assets/images/course/course-python.jpg" alt="">
-                                </div>
-                    
-                                <div class="card-body">
-                                    <h4 class="text-violet"><a class="card-body-title" href="./detalleProducto.html">The Python Course: build web application</a></h4>
-                                    <div class="text-Light-purple card-body-detail">
-                                        <span>
-                                            <i class="far fa-clock"></i>
-                                        </span>
-                                        <p class="card-body-detail-time">2h 30m</p>
-                                        <span class="level">
-                                            <i class="fas fa-signal"></i>
-                                        </span>
-                                        <p>Intermediate</p>
-                                    </div>
-                                    <div>
-                                        <span class="estrellas">
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                            4.5 
-                                        </span> <p class="text-Light-purple" style="margin-top: 15px;">(13,245)</p>        
-                                    </div>
-                                </div>
-                                <div class="card-footer">
-                                    <div class="profesor">
-                                        <div>
-                                            <img src="https://codescandy.com/geeks-bootstrap-5/assets/images/avatar/avatar-4.jpg" width="25" alt="" style="border-radius: 50%;">
-                                        </div>
-                                        <p>Claire Robertson</p>
-                                    </div>
-                                    <div>
-                                        <span>
-                                            <i class="far fa-bookmark"></i>
-                                        </span>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-        
-                        <a href="./detalleProducto.html">
-                            <div class="card">
-                                <div>
-                                    <img class="img-card" src="https://codescandy.com/geeks-bootstrap-5/assets/images/course/course-python.jpg" alt="">
-                                </div>
-                    
-                                <div class="card-body">
-                                    <h4 class="text-violet"><a class="card-body-title" href="./detalleProducto.html">The Python Course: build web application</a></h4>
-                                    <div class="text-Light-purple card-body-detail">
-                                        <span>
-                                            <i class="far fa-clock"></i>
-                                        </span>
-                                        <p class="card-body-detail-time">2h 30m</p>
-                                        <span class="level">
-                                            <i class="fas fa-signal"></i>
-                                        </span>
-                                        <p>Intermediate</p>
-                                    </div>
-                                    <div>
-                                        <span class="estrellas">
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                            4.5 
-                                        </span> <p class="text-Light-purple" style="margin-top: 15px;">(13,245)</p>        
-                                    </div>
-                                </div>
-                                <div class="card-footer">
-                                    <div class="profesor">
-                                        <div>
-                                            <img src="https://codescandy.com/geeks-bootstrap-5/assets/images/avatar/avatar-4.jpg" width="25" alt="" style="border-radius: 50%;">
-                                        </div>
-                                        <p>Claire Robertson</p>
-                                    </div>
-                                    <div>
-                                        <span>
-                                            <i class="far fa-bookmark"></i>
-                                        </span>
-                                    </div>
-                                </div>
-                            </div>
-                        </a> -->
-        
-                        
+
                         <!-- <div>
                             <ul class="carrousel-arrow">
                                 <li class="carrousel-arrow-circle">
