@@ -30,7 +30,6 @@ class Store {
             curso.setLevel(item.level)
             curso.setDuration(item.duration)
             curso.setImage(item.image)
-            // curso.setPrice(item.price)
             curso.setViews(item.views)
             curso.setPoints(item.points)
             curso.setPhotoTutor(item.photo_tutor)
