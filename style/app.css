@@ -236,6 +236,18 @@ li {
     background: rgb(117, 79, 254);
 }
 
+.conteiner-error-msg {
+    height: 400px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.msg-error {
+    font-size: 1.7em;
+    color: #754ffe;
+}
+
 @keyframes aparicion {
     0% {width: 0%}
     100% {width: 100%}

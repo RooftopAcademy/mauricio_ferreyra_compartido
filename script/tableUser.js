@@ -5,9 +5,7 @@ function getUsers() {
     fetch('https://jsonplaceholder.typicode.com/users')
     .then((response) => response.json())
     .then(json => json.forEach(user => tabla.innerHTML += row(user)))
-    .catch(error => {
-        console.log(error)
-    })
+    .catch(error => document.querySelector('.js-msg-error').innerHTML = msgError())
 }
 
 async function fetching () {
