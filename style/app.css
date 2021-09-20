@@ -84,6 +84,7 @@ li {
 }
 .nav-link {
     margin: 5px 10px;
+    color: #000
 }
 .nav-link:hover {
     cursor: pointer;
