@@ -38,7 +38,8 @@ class Store {
             curso.setNameTutor(item.name_tutor)
 
             this.catalog.add(curso)
-        })
 
+        })
+        
     }
 }

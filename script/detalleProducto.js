@@ -1,5 +1,6 @@
 import store from '../src/App.js'
 
+document.querySelector('.js-navbar').innerHTML = navbar()
 let themes = document.querySelectorAll('.theme-conteiner-item')
 
 themes.forEach((item, index) => {

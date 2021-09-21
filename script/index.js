@@ -3,6 +3,7 @@ import store from '../src/App.js'
 let cursos = store.getCatalog().all()
 
 document.getElementById("inicio").innerHTML = "Welcome to Geeks UI Learning Application"
+document.querySelector('.js-navbar').innerHTML = navbar()
 
 const recomended = document.getElementById('recomended')
 cursos.forEach((curso) => {

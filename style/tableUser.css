@@ -1,0 +1,27 @@
+.conteiner-table {
+    width: 90%;
+    margin: auto;
+    margin-top: 25px;
+    background-color: white;
+}
+.table {
+    overflow: auto;
+}
+table {
+    width: 100%;
+    text-align: left;
+    border-collapse: collapse;
+}
+th, td {
+    padding: 20px;
+}
+
+.table-head {
+    background-color: #754ffe;
+    border-bottom: solid 5px #18113c;
+    color: white;
+}
+
+tr:nth-child(even){
+    background-color: #ddd;
+}
