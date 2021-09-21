@@ -1,3 +1,5 @@
+import store from '../src/App.js'
+
 let themes = document.querySelectorAll('.theme-conteiner-item')
 
 themes.forEach((item, index) => {
@@ -10,4 +12,8 @@ themes.forEach((item, index) => {
     })
 })
 
-document.querySelector('.js-head-detail-course').innerHTML = headDetailCourse()
+
+let course = store.catalog.findById(localStorage.getItem('id_course'))
+
+document.querySelector('.js-head-detail-course').innerHTML = headDetailCourse(course)
+document.querySelector('.js-body-detail-course').innerHTML = bodyDetailCourse(course)

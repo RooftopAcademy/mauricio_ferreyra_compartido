@@ -2,6 +2,7 @@ class Course {
     constructor() {
         this.id = Number
         this.name = String
+        this.lenguaje = String
         this.description = String
         this.level = String
         this.duration = Number
@@ -28,6 +29,14 @@ class Course {
 
     getName() {
         return this.name
+    }
+
+    setLenguaje(n) {
+        this.lenguaje = n
+    }
+
+    getLenguaje() {
+        return this.lenguaje
     }
 
     setDescription(n) {
