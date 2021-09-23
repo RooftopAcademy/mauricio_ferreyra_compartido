@@ -1,4 +1,4 @@
-import store from '../src/App.js'
+import store from '../src/object/App.js'
 
 document.querySelector('.js-navbar').innerHTML = navbar()
 let themes = document.querySelectorAll('.theme-conteiner-item')

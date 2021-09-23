@@ -1,4 +1,4 @@
-import store from '../src/App.js'
+import store from '../src/object/App.js'
 
 let cursos = store.getCatalog().all()
 
