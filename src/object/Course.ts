@@ -1,4 +1,4 @@
-class Course {
+export class Course {
     private _id!: number
     private _name!: string
     private _lenguaje!: string

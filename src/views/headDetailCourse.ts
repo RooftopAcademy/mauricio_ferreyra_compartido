@@ -1,3 +1,5 @@
+import { Course } from "../object/Course";
+
 function headDetailCourse(course: Course):string {
     return `
     <div class="inicio">

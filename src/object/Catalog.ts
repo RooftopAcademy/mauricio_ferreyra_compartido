@@ -1,5 +1,9 @@
-class Catalog {
-    _courses!: Course[]
+import { Course } from "./Course"
+
+export class Catalog {
+    _courses: Course[] = []
+
+    constructor() {}
 
     all() {
         return this._courses

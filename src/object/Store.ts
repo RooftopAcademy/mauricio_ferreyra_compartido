@@ -1,6 +1,9 @@
-class Store {
+import { Catalog } from "./Catalog"
+import { Course } from "./Course"
+
+export class Store {
     _user!: User
-    _catalog!: Catalog
+    _catalog: Catalog = new Catalog 
 
     get catalog() {
         return this._catalog
@@ -36,7 +39,8 @@ class Store {
             {id: 4, name: 'Angular - the complete guide for beginner', duration: '1h 30m', level: 'Beginner', points: 4.5, views: 8890, photo_tutor: foto, name_tutor: 'Claire Robertson', description: 'Angular is a web application framework developed in TypeScript, open source, maintained by Google, used to create and maintain single page web applications.', image: angular, languaje: 'Angular', price: 600},
         ]
 
-        data.forEach(item => {
+
+        data.forEach((item: elementProduct) => {
             let curso: Course = new Course
             curso.id = item.id
             curso.name = item.name

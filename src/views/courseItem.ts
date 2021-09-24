@@ -1,3 +1,5 @@
+import { Course } from "../object/Course"
+
 function courseItem(curso: Course): string {
     return `
     <a class="" href="./detalleProducto.html">
