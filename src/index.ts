@@ -1,5 +1,7 @@
 import render from "./helpers";
 import store from "./object/App";
+import courseItem from "./views/courseItem";
+import navbar from "./views/navbar";
 
 let cursos: Course[] = store.catalog.all()
 render(document.getElementById("inicio"), "Welcome to Geeks UI Learning Application")

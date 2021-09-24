@@ -1,4 +1,5 @@
 import render from "./helpers"
+import navbar from "./views/navbar"
 
 render(document.querySelector('.js-navbar'), navbar())
 
