@@ -1,6 +1,18 @@
-import { Store } from "./Store"
+import * as _ from 'lodash';
+import index from "..";
+import detalleProducto from '../detalleProducto';
 
-let store = new Store
-// store.fetchCourses()
 
-export default store
+(function App(path: string) {
+    switch (path) {
+        case '/':
+            index()
+            break;
+        case '/index.html':
+            index()
+            break;
+        case '/detalleProducto.html':
+            detalleProducto()
+            break;
+    }
+})(window.location.pathname)

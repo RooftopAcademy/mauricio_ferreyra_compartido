@@ -1,7 +1,10 @@
-function render(el: HTMLElement | null , b: string) {
+export function render(el: HTMLElement | null , b: string) {
     if (el) {
         el.innerHTML += b
     }
 }
 
-export default render
+export function toNumber(input: string): number {
+    let numeric = Number(input)
+    return numeric
+}

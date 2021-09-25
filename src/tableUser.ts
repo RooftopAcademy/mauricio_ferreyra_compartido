@@ -1,4 +1,4 @@
-import render from "./helpers";
+import {render} from "./helpers";
 import alertError from "./views/alertError";
 import navbar from "./views/navbar";
 import row from "./views/row";
@@ -11,7 +11,6 @@ function getUsers(): void {
     fetch('https://jsonplaceholder.typicode.com/users')
     .then((res) => res.json())
     .then(json => json.forEach((user: {id: number, username: string, name: string, email: string}) => {
-        console.log(user)
         if (tabla) tabla.innerHTML += row(user)
     }))
     .catch(err =>  { if (msgErr) msgErr.innerHTML = alertError()})

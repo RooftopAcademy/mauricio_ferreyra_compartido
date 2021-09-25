@@ -37,3 +37,5 @@ function headDetailCourse(course: Course):string {
     </div>
     `
 }
+
+export default headDetailCourse
