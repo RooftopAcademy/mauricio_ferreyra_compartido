@@ -14,8 +14,6 @@ export class Catalog {
     }
 
     findById(id: number): Course | undefined {
-        return this._courses.find(course => {
-            return course.id == id
-        })
+        return this._courses.find(course => course.id == id)
     } 
 }

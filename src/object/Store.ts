@@ -1,9 +1,13 @@
 import { Catalog } from "./Catalog"
 import { Course } from "./Course"
+import { User } from "./User"
+import { Users } from "./Users"
 
 export class Store {
     private _user!: User
+    private _users: Users = new Users
     private _catalog: Catalog = new Catalog 
+    private _iniciado: boolean = false 
 
     get catalog(): Catalog {
         return this._catalog
@@ -11,6 +15,41 @@ export class Store {
 
     get user(): User {
         return this._user
+    }
+
+    set user(user: User) {
+        this._user = user
+    }
+
+    get users() {
+        return this._users
+    }
+
+    get iniciado() {
+        return this._iniciado
+    }
+
+    set iniciado(valor: boolean) {
+        this._iniciado = valor
+    }
+    
+    fetchUsers() {
+        let data: {id: number, username: string, password: string, state: boolean}[]  = [
+            {id: 1, username: 'usuario', password: '123456', state: false},
+            {id: 2, username: 'mauricio', password: '123456', state: false},
+            {id: 3, username: 'josejuan', password: '123456', state: false},
+        ]
+
+        data.forEach((el: {id: number, username: string, password: string, state: boolean}) => {
+            let user = new User
+            user.id = el.id
+            user.username = el.username
+            user.password = el.password
+            user.state = el.state
+
+            this._users.add(user)
+        })
+
     }
 
     fetchCourses(): void {
