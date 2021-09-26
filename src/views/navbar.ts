@@ -1,4 +1,4 @@
-function navbar (): string {
+function navbar (username:string): string {
     return `
     <nav class="navigator">
         <div class="navigator-conteiner">
@@ -43,7 +43,15 @@ function navbar (): string {
                     </a>
                 </li>
                 <li>
-                    <img class="perfil" src="https://codescandy.com/geeks-bootstrap-5/assets/images/avatar/avatar-1.jpg" width="45" alt="">
+                    <div class="dropdown">
+                        <button class="dropbtn js-btn-perfil">
+                            <img class="perfil" src="https://codescandy.com/geeks-bootstrap-5/assets/images/avatar/avatar-1.jpg" width="45" alt="">
+                        </button>
+                        <div class="dropdown-content">
+                            <a href="#" class="nav-link dropdow-item">${username}</a>
+                            <a id="logout" href="#" class="nav-link dropdow-item">Logout</a>
+                        </div>
+                    </div>
                 </li>
             </ul>
             <div>

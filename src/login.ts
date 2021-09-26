@@ -2,8 +2,8 @@ import { store } from "."
 import { toNumber } from "./helpers"
 
 function login() {
-    store.fetchUsers()
-    console.log(store.users.all())
+    // store.fetchUsers()
+    // console.log(store.users.all())
 
     let menssageError = document.getElementById('msg-error')
     let formulario = document.getElementById('login')!

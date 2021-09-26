@@ -56,6 +56,7 @@ export class User implements UserInterface {
 
     logout(): void {
         localStorage.removeItem('user_id')
+        window.location.href = "/login.html"
     }
 
     changeUsername(): void {

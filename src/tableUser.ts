@@ -1,3 +1,4 @@
+import { store } from ".";
 import {render} from "./helpers";
 import alertError from "./views/alertError";
 import navbar from "./views/navbar";
@@ -5,7 +6,13 @@ import row from "./views/row";
 
 function tableUser() {
 
-    render(document.querySelector('.js-navbar'), navbar())
+    render(document.querySelector('.js-navbar'), navbar(store.user.username))
+    document.querySelector('.js-btn-perfil')!.addEventListener('click', function() {
+        console.log(this)
+        this.classList.contains('active') ? this.classList.remove('active') : this.classList.add('active')
+    })
+    document.querySelector('#logout')!.addEventListener('click',() => store.user.logout())
+
     let tabla = document.querySelector('.js-tbody')
     let msgErr = document.querySelector('.js-msg-error')
     

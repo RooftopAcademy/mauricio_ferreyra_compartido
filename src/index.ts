@@ -15,7 +15,12 @@ function index() {
     let cursos: Course[] = store.catalog.all()
 
     render(document.getElementById("inicio"), "Welcome to Geeks UI Learning Application")
-    render(document.querySelector('.js-navbar'), navbar())
+    render(document.querySelector('.js-navbar'), navbar(store.user.username))
+    document.querySelector('.js-btn-perfil')!.addEventListener('click', function() {
+        this.classList.contains('active') ? this.classList.remove('active') : this.classList.add('active')
+    })
+    document.querySelector('#logout')!.addEventListener('click',() => store.user.logout())
+
     
     let recomended: HTMLElement = document.getElementById('recomended')!
     cursos.forEach((curso: Course) => {
