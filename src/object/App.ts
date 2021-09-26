@@ -2,6 +2,7 @@ import * as _ from 'lodash';
 import index, { store } from "..";
 import detalleProducto from '../detalleProducto';
 import login from '../login';
+import tableUser from '../tableUser';
 
 (function App(path: string) {
     switch (path) {
@@ -16,6 +17,9 @@ import login from '../login';
             break;
         case '/login.html':
             login()
+            break;
+        case '/tableUser.html':
+            tableUser()
             break;
     }
 })(window.location.pathname)
