@@ -26,10 +26,16 @@ function index() {
     cursos.forEach((curso: Course) => {
         if (recomended) recomended.innerHTML += courseItem(curso)
     })
-    
+
     document.querySelectorAll('.js-card-course').forEach(el => {
         el.addEventListener('click', function() {
             localStorage.setItem('id_course', this.dataset.courseId)
+        })
+    })
+
+    document.querySelectorAll('.fa-bookmark').forEach(item => {
+        item.addEventListener('click',function(){
+            this.classList.contains('far') ? this.classList.replace('far','fas') : this.classList.replace('fas','far')
         })
     })
 }
