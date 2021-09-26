@@ -1,5 +1,3 @@
-import { store } from ".."
-
 export class User implements UserInterface {
     
     private _id!: number
@@ -54,6 +52,10 @@ export class User implements UserInterface {
             this._state = true
             return this._id
         }
+    }
+
+    logout(): void {
+        localStorage.removeItem('user_id')
     }
 
     changeUsername(): void {

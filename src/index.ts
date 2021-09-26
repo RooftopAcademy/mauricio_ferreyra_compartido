@@ -8,8 +8,8 @@ import navbar from "./views/navbar";
 export let store = new Store
 store.fetchCourses();
 store.fetchUsers()
-let u = store.users.findById(toNumber(localStorage.getItem('user_id')!))
-if (u) store.user = u
+let user = store.users.findById(toNumber(localStorage.getItem('user_id')!))
+if (user) store.user = user
 
 function index() {
     let cursos: Course[] = store.catalog.all()
