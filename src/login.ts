@@ -15,9 +15,6 @@ function login() {
         store.users.all().forEach(user => {
             if (user.login(username.value, password.value) != undefined) {
                 localStorage.setItem('user_id', user.login(username.value, password.value)?.toString()!)
-                let u = store.users.findById(toNumber(localStorage.getItem('user_id')!))
-                console.log(u)
-                if (u) store.user = u
                 window.location.href = "/index.html"
             }
         })

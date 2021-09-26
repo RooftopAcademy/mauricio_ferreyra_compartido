@@ -7,9 +7,9 @@ import navbar from "./views/navbar";
 
 export let store = new Store
 store.fetchCourses();
-// let u = store.users.findById(toNumber(localStorage.getItem('user_id')!))
-// if (u) store.user = u
-// console.log(store.user)
+store.fetchUsers()
+let u = store.users.findById(toNumber(localStorage.getItem('user_id')!))
+if (u) store.user = u
 
 function index() {
     let cursos: Course[] = store.catalog.all()

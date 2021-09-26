@@ -1,15 +1,7 @@
 import * as _ from 'lodash';
-import index from "..";
+import index, { store } from "..";
 import detalleProducto from '../detalleProducto';
 import login from '../login';
-import { Store } from './Store';
-
-// let store:Store
-
-// if (!store.iniciado) {
-//     store = new Store
-//     store.fetchCourses();
-// } 
 
 (function App(path: string) {
     switch (path) {
