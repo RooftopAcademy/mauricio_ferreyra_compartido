@@ -1,15 +1,15 @@
-export class Course {
+export class Course implements CourseInterface {
     private _id!: number
-    private _name!: string
-    private _lenguaje!: string
-    private _description!: string
-    private _level!: string
-    private _duration!: string
-    private _image!: string
-    private _price!: number
+    _name!: string
+    _lenguaje!: string
+    _description!: string
+    _level!: level
+    _duration!: string
+    _image!: string
+    _price!: number
+    _poitns!: number
+    _views!: number
     private _video!: Video
-    private _poitns!: number
-    private _views!: number
     private _photo_tutor!: string
     private _name_tutor!: string
 
@@ -49,11 +49,11 @@ export class Course {
         return this._description
     }
 
-    set level(value: string) {
+    set level(value: level) {
         this._level = value
     }
     
-    get level(): string {
+    get level(): level {
         return this._level
     }
 

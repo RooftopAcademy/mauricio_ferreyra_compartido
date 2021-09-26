@@ -1,7 +1,8 @@
-class User {
+class User implements UserInterface {
+    
     private _id!: number
-    private _username!: string
-    private _password!: string
+    _username!: string
+    _password!: string
     private _favourite!: []
     private _courses!: []
     private _state!: boolean
@@ -28,5 +29,12 @@ class User {
 
     get state(): boolean {
         return this._state
+    }
+
+    login(): void {
+        throw new Error("Method not implemented.")
+    }
+    changeUsername(): void {
+        throw new Error("Method not implemented.")
     }
 }

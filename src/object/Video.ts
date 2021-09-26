@@ -1,7 +1,8 @@
-class Video {
+class Video implements VideoInterface {
+    
     private _id!: number
-    private _duration!: number
-    private _video!: string
+    _duration!: number
+    _video!: string
 
     get id(): number {
         return this._id
@@ -13,5 +14,9 @@ class Video {
 
     get video(): string {
         return this._video
+    }
+
+    play(): void {
+        throw new Error("Method not implemented.")
     }
 }
