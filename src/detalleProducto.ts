@@ -5,7 +5,12 @@ import headDetailCourse from "./views/headDetailCourse"
 import navbar from "./views/navbar"
 
 function detalleProducto () {
-    render(document.querySelector('.js-navbar'), navbar())
+    render(document.querySelector('.js-navbar'), navbar(store.user.username))
+    document.querySelector('.js-btn-perfil')!.addEventListener('click', function() {
+        console.log(this)
+        this.classList.contains('active') ? this.classList.remove('active') : this.classList.add('active')
+    })
+    document.querySelector('#logout')!.addEventListener('click',() => store.user.logout())
     
     let themes = document.querySelectorAll('.theme-conteiner-item')
     themes.forEach(item => {
