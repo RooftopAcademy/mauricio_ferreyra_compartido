@@ -7,7 +7,9 @@
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
     <link rel="stylesheet" href="/style/app.css">
     <link rel="stylesheet" href="/style/login.css">
-    <script src="/script/login.js" defer></script>
+    <!-- <script src="/dist/login.js" defer></script> -->
+    <script src="dist/bundle.js" defer></script>
+
     <title>Login</title>
 </head>
 <body>
@@ -20,13 +22,13 @@
                 <form id="login" action="/index.html">
                     <div class="control-form">
                         <!-- <label for="username">Username</label> -->
-                        <input class="input" type="text" name="username" placeholder="Username">
+                        <input class="input js-username" type="text" name="username" placeholder="Username">
                     </div>
                     <div class="control-form">
                         <!-- <label for="password">Password</label> -->
-                        <input class="input" type="password" name="password" placeholder="password">
+                        <input class="input js-password" type="password" name="password" placeholder="password">
                     </div>
-                    <input name="enviar" type="submit" class="button btn-success w-100 mt-2" value="Log in">
+                    <input id="enviar-form" name="enviar" type="submit" class="button btn-success w-100 mt-2" value="Log in">
                 </form>
             </div>
         </div>
