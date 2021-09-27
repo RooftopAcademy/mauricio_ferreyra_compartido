@@ -7,19 +7,7 @@
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
     <link rel="stylesheet" href="./style/app.css">
     <link rel="stylesheet" href="./style/index.css">
-
-    <!-- <script src="src/views/courseItem.js" defer></script>
-    <script src="src/views/headDetailCourse.js" defer></script>
-    <script src="src/views/navbar.js" defer></script>
     
-    <script src="src/object/Store.js" defer></script>
-    <script src="src/object/Course.js" defer></script>
-    <script src="src/object/User.js" defer></script>
-    <script src="src/object/Video.js" defer></script>
-    <script src="src/object/Catalog.js" defer></script> 
-    <script src="src/object/App.js" defer></script>
-    
-    <script src="src/index.js" type="module" defer></script> -->
     <script src="dist/bundle.js" defer></script>
 
     <title>Listado</title>
@@ -27,125 +15,67 @@
 <body>
     <!-- https://themes.getbootstrap.com/preview/?theme_id=61529 -->
     
-    <!-- <div class="conteiner-inicial d-flex"> -->
-
-        <div>
-            <header class="js-navbar">
-                <!-- Navbar JavaScript -->
-            </header>
-        
-            <section>
-                <div class="inicio">
-                    <div class="conteiner">
-                        <div class="inicio-conteiner conteiner-welcome">
-                            <h1 id="inicio" class="inicio-conteiner-title"></h1>
-                            <p class="inicio-conteiner-subtitle">Hand-picked Instuctor and expertly crafted courses, designed for the modern students and entrepreneur.</p>
-                            <div>
-                                <button class="button btn-success">Browse Courses</button>
-                                <button class="button">Are you Instructor?</button>
-                            </div>
+    <div>
+        <header class="js-navbar">
+            <!-- Navbar JavaScript -->
+        </header>
+    
+        <section>
+            <div class="inicio">
+                <div class="conteiner">
+                    <div class="inicio-conteiner conteiner-welcome">
+                        <h1 id="inicio" class="inicio-conteiner-title"></h1>
+                        <p class="inicio-conteiner-subtitle">Hand-picked Instuctor and expertly crafted courses, designed for the modern students and entrepreneur.</p>
+                        <div>
+                            <button class="button btn-success">Browse Courses</button>
+                            <button class="button">Are you Instructor?</button>
                         </div>
-                        <div class="conteiner-img">
-                            <img class="conteiner-img-inicio" src="https://codescandy.com/geeks-bootstrap-5/assets/images/hero/hero-img.png" alt="">
+                    </div>
+                    <div class="conteiner-img">
+                        <img class="conteiner-img-inicio" src="https://codescandy.com/geeks-bootstrap-5/assets/images/hero/hero-img.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="info">
+                <div class="conteiner-info">
+                    <div class="info-conteiner">
+                        <span class="circle-icon">
+                            <i class="fas fa-video"></i>
+                        </span>
+                        <div class="info-conteiner-text">
+                            <h4 class="text-violet m-0">30,000 online courses</h4>
+                            <p class="text-Light-purple m-0">Enjoy a variety of fresh topics</p>
+                        </div>
+                    </div>
+                    <div class="info-conteiner">
+                        <span class="circle-icon">
+                            <i class="fas fa-user-friends"></i>
+                        </span>
+                        <div class="info-conteiner-text">
+                            <h4 class="text-violet m-0">Expert instruction</h4>
+                            <p class="text-Light-purple m-0">Find the right instructor for you</p>
+                        </div>
+                    </div>
+                    <div class="info-conteiner">
+                        <span class="circle-icon">
+                            <i class="fas fa-clock"></i>
+                        </span>
+                        <div class="info-conteiner-text">
+                            <h4 class="text-violet m-0">Lifetie access</h4>
+                            <p class="text-Light-purple m-0">Learn on your schedule</p>
                         </div>
                     </div>
                 </div>
-                <div class="info">
-                    <div class="conteiner-info">
-                        <div class="info-conteiner">
-                            <span class="circle-icon">
-                                <i class="fas fa-video"></i>
-                            </span>
-                            <div class="info-conteiner-text">
-                                <h4 class="text-violet m-0">30,000 online courses</h4>
-                                <p class="text-Light-purple m-0">Enjoy a variety of fresh topics</p>
-                            </div>
-                        </div>
-                        <div class="info-conteiner">
-                            <span class="circle-icon">
-                                <i class="fas fa-user-friends"></i>
-                            </span>
-                            <div class="info-conteiner-text">
-                                <h4 class="text-violet m-0">Expert instruction</h4>
-                                <p class="text-Light-purple m-0">Find the right instructor for you</p>
-                            </div>
-                        </div>
-                        <div class="info-conteiner">
-                            <span class="circle-icon">
-                                <i class="fas fa-clock"></i>
-                            </span>
-                            <div class="info-conteiner-text">
-                                <h4 class="text-violet m-0">Lifetie access</h4>
-                                <p class="text-Light-purple m-0">Learn on your schedule</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        
-            <!-- section -->
-            <section>
-                <div class="conteiner-products">
-                    <h2 class="text-violet lista-title">Recommended to you</h2>
-                    <div id="recomended" class="lista">
+            </div>
+        </section>
+    
+        <!-- section -->
+        <section>
+            <div class="conteiner-products">
+                <h2 class="text-violet lista-title">Recommended to you</h2>
+                <div id="recomended" class="lista">
 
-                        <!-- <div>
-                            <ul class="carrousel-arrow">
-                                <li class="carrousel-arrow-circle">
-                                    <i class="arrow fas fa-chevron-left"></i>
-                                </li>
-                                <li class="carrousel-arrow-circle">
-                                    <i class="arrow fas fa-chevron-right"></i>
-                                </li>
-                            </ul>
-                        </div> -->
-                    </div>
-        
-                    <h2 class="text-violet lista-title">Most Popular</h2>
-                    <div class="lista">
-                        <a href="./detalleProducto.html">
-                            <div class="card">
-                                <div>
-                                    <img class="img-card" src="https://codescandy.com/geeks-bootstrap-5/assets/images/course/course-wordpress.jpg" alt="">
-                                </div>
-                                <div class="card-body">
-                                    <h4 class="text-violet"><a class="card-body-title" href="./detalleProducto.html">Wordpress: complete WordPress theme & plugin development</a></h4>
-                                    <div class="text-Light-purple card-body-detail">
-                                        <span>
-                                            <i class="far fa-clock"></i>
-                                        </span>
-                                        <p class="card-body-detail-time">2h 30m</p>
-                                        <span class="level">
-                                            <i class="fas fa-signal"></i>
-                                        </span>
-                                        <p>Intermediate</p>
-                                    </div>
-                                    <div >
-                                        <span class="estrellas">
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                            4.5 
-                                        </span> <p class="text-Light-purple" style="margin-top: 15px;">(16,500)</p>        
-                                    </div>
-                                </div>
-                                <div class="card-footer">
-                                    <div class="profesor">
-                                        <div>
-                                            <img src="https://codescandy.com/geeks-bootstrap-5/assets/images/avatar/avatar-8.jpg" width="25" alt="" style="border-radius: 50%;">
-                                        </div>
-                                        <p>Claire Robertson</p>
-                                    </div>
-                                    <div>
-                                        <span>
-                                            <i class="far fa-bookmark"></i>
-                                        </span>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
+                    <!-- <div>
                         <ul class="carrousel-arrow">
                             <li class="carrousel-arrow-circle">
                                 <i class="arrow fas fa-chevron-left"></i>
@@ -154,14 +84,68 @@
                                 <i class="arrow fas fa-chevron-right"></i>
                             </li>
                         </ul>
-                    </div>
+                    </div> -->
                 </div>
-                
-            </section>
+    
+                <h2 class="text-violet lista-title">Most Popular</h2>
+                <div class="lista">
+                    <a href="./detalleProducto.html">
+                        <div class="card">
+                            <div>
+                                <img class="img-card" src="https://codescandy.com/geeks-bootstrap-5/assets/images/course/course-wordpress.jpg" alt="">
+                            </div>
+                            <div class="card-body">
+                                <h4 class="text-violet"><a class="card-body-title" href="./detalleProducto.html">Wordpress: complete WordPress theme & plugin development</a></h4>
+                                <div class="text-Light-purple card-body-detail">
+                                    <span>
+                                        <i class="far fa-clock"></i>
+                                    </span>
+                                    <p class="card-body-detail-time">2h 30m</p>
+                                    <span class="level">
+                                        <i class="fas fa-signal"></i>
+                                    </span>
+                                    <p>Intermediate</p>
+                                </div>
+                                <div >
+                                    <span class="estrellas">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        4.5 
+                                    </span> <p class="text-Light-purple" style="margin-top: 15px;">(16,500)</p>        
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                                <div class="profesor">
+                                    <div>
+                                        <img src="https://codescandy.com/geeks-bootstrap-5/assets/images/avatar/avatar-8.jpg" width="25" alt="" style="border-radius: 50%;">
+                                    </div>
+                                    <p>Claire Robertson</p>
+                                </div>
+                                <div>
+                                    <span>
+                                        <i class="far fa-bookmark"></i>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <ul class="carrousel-arrow">
+                        <li class="carrousel-arrow-circle">
+                            <i class="arrow fas fa-chevron-left"></i>
+                        </li>
+                        <li class="carrousel-arrow-circle">
+                            <i class="arrow fas fa-chevron-right"></i>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+        </section>
 
-        </div>
-    <!-- </div> -->
-
+    </div>
     
 
 </body>

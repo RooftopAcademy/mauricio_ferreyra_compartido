@@ -2,14 +2,18 @@ import { Catalog } from "./Catalog"
 import { Course } from "./Course"
 
 export class Store {
-    _user!: User
-    _catalog: Catalog = new Catalog 
+    private _user!: User
+    private _catalog: Catalog = new Catalog 
 
-    get catalog() {
+    get catalog(): Catalog {
         return this._catalog
     }
 
-    fetchCourses() {
+    get user(): User {
+        return this._user
+    }
+
+    fetchCourses(): void {
         
         type elementProduct = {
             id: number,

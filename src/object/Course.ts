@@ -21,7 +21,7 @@ export class Course {
         this._id = value
     }
 
-    get id(){
+    get id(): number{
         return this._id
     }
 
@@ -29,7 +29,7 @@ export class Course {
         this._name = value
     }
 
-    get name() {
+    get name(): string {
         return this._name
     }
 
@@ -37,7 +37,7 @@ export class Course {
         this._lenguaje = value
     }
 
-    get lenguaje() {
+    get lenguaje(): string {
         return this._lenguaje
     }
 
@@ -45,7 +45,7 @@ export class Course {
         this._description = value
     }
 
-    get description() {
+    get description(): string {
         return this._description
     }
 
@@ -53,7 +53,7 @@ export class Course {
         this._level = value
     }
     
-    get level() {
+    get level(): string {
         return this._level
     }
 
@@ -61,7 +61,7 @@ export class Course {
         this._duration = value
     }
 
-    get duration() {
+    get duration(): string {
         return this._duration
     }
 
@@ -69,7 +69,7 @@ export class Course {
         this._image = value
     }
 
-    get image() {
+    get image(): string {
         return this._image
     }
 
@@ -77,7 +77,7 @@ export class Course {
         this._price = value
     }
 
-    get price() {
+    get price(): number {
         return this._price
     }
 
@@ -85,7 +85,7 @@ export class Course {
         this._poitns = value
     }
 
-    get points() {
+    get points(): number {
         return this._poitns
     }
 
@@ -93,7 +93,7 @@ export class Course {
         this._views = value
     }
 
-    get views() {
+    get views(): number {
         return this._views
     }
 
@@ -101,7 +101,7 @@ export class Course {
         this._photo_tutor = value
     }
 
-    get photo_tutor() {
+    get photo_tutor(): string {
         return this._photo_tutor
     }
 
@@ -109,7 +109,7 @@ export class Course {
         this._name_tutor = value
     }
 
-    get name_tutor() {
+    get name_tutor(): string {
         return this._name_tutor
     }
 

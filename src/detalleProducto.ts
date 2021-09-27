@@ -21,7 +21,7 @@ function detalleProducto () {
     let course = store.catalog.findById(toNumber(localStorage.getItem('id_course')!))!
 
     render(document.querySelector('.js-head-detail-course'), headDetailCourse(course))
-    render(document.querySelector('.js-head-detail-course'), bodyDetailCourse(course))
+    render(document.querySelector('.js-body-detail-course'), bodyDetailCourse(course))
 }
 
 export default detalleProducto

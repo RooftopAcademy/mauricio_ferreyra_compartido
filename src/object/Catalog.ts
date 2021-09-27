@@ -5,7 +5,7 @@ export class Catalog {
 
     constructor() {}
 
-    all() {
+    all(): Course[] {
         return this._courses
     }
 
@@ -13,7 +13,7 @@ export class Catalog {
         this._courses.push(curso)
     }
 
-    findById(id: number) {
+    findById(id: number): Course | undefined {
         return this._courses.find(course => {
             return course.id == id
         })
