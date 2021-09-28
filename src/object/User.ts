@@ -1,9 +1,11 @@
+import { Course } from "./Course"
+
 export class User implements UserInterface {
     
     private _id!: number
     _username!: string
     _password!: string
-    private _favourite!: []
+    private _favourite: number[] = []
     private _courses!: []
     private _state!: boolean
 
@@ -31,7 +33,7 @@ export class User implements UserInterface {
         this._password = valor
     }
 
-    get favourite(): [] {
+    get favourite(): number[] {
         return this._favourite
     }
 
@@ -62,4 +64,14 @@ export class User implements UserInterface {
     changeUsername(): void {
         throw new Error("Method not implemented.")
     }
+
+    addFavourite(curso: number) {
+        this._favourite.push(curso)
+    }
+
+    removeFavourite(id:number) {
+        let index: number =  this._favourite.indexOf(id)
+        this._favourite.splice(index,1)
+    }
+
 }

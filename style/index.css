@@ -9,15 +9,7 @@
     text-align: left;
     margin-top: 0px;
 }
-/* .btn-success {
-    color: #fff;
-    background-color: #19cb98;
-    border-color: #19cb98;
-}.btn-success:hover {
-    color: #fff;
-    background-color: #15ad81;
-    border-color: #14a27a;
-} */
+
 .conteiner-img {
     margin-top: 25px;
 }
@@ -139,6 +131,9 @@
     background-color: #754ffe;
     border-color: #754ffe;
     color: #fff;
+    cursor: pointer;
+}
+.fa-bookmark:hover {
     cursor: pointer;
 }
 
