@@ -1,3 +1,5 @@
+import { CourseInterface, level } from "../interface/CourseInterface"
+
 export class Course implements CourseInterface {
     private _id!: number
     _name!: string
@@ -12,10 +14,6 @@ export class Course implements CourseInterface {
     private _video!: Video
     private _photo_tutor!: string
     private _name_tutor!: string
-
-    constructor() {
-        
-    }
 
     set id(value:number) {
         this._id = value

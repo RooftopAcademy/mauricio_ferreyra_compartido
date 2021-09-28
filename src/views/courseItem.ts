@@ -40,7 +40,7 @@ function courseItem(curso: Course): string {
                 </div>
                 <div>
                     <span>
-                        <i class="far fa-bookmark"></i>
+                        <i class="far fa-bookmark" data-course-id="${curso.id}"></i>
                     </span>
                 </div>
             </div>

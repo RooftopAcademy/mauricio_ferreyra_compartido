@@ -16,13 +16,15 @@ function index() {
 
     render(document.getElementById("inicio"), "Welcome to Geeks UI Learning Application")
     render(document.querySelector('.js-navbar'), navbar(store.user.username))
+
     document.querySelector('.js-btn-perfil')!.addEventListener('click', function() {
         this.classList.contains('active') ? this.classList.remove('active') : this.classList.add('active')
     })
-    document.querySelector('#logout')!.addEventListener('click',() => store.user.logout())
 
+    document.querySelector('#logout')!.addEventListener('click',() => store.user.logout())
     
     let recomended: HTMLElement = document.getElementById('recomended')!
+    
     cursos.forEach((curso: Course) => {
         if (recomended) recomended.innerHTML += courseItem(curso)
     })
@@ -35,6 +37,7 @@ function index() {
 
     document.querySelectorAll('.fa-bookmark').forEach(item => {
         item.addEventListener('click',function(){
+            this.classList.contains('far') ? store.user.addFavourite(this.dataset.courseId) : store.user.removeFavourite(this.dataset.courseId)
             this.classList.contains('far') ? this.classList.replace('far','fas') : this.classList.replace('fas','far')
         })
     })

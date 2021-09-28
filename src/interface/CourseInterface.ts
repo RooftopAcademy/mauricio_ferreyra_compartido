@@ -1,10 +1,10 @@
-enum level {
-    begginer,
-    intermediate,
-    advanced
+export enum level {
+    begginer = "begginer",
+    intermediate = "intermediate",
+    advanced = "advanced"
 }
 
-interface CourseInterface {
+export interface CourseInterface {
     _name: string
     _lenguaje: string
     _description: string

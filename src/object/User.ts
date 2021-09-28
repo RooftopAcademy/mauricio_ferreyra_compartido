@@ -5,7 +5,7 @@ export class User implements UserInterface {
     private _id!: number
     _username!: string
     _password!: string
-    private _favourite!: Course[] // Plantear guardar las id de los curso y luego buscarlos
+    private _favourite: number[] = []
     private _courses!: []
     private _state!: boolean
 
@@ -33,7 +33,7 @@ export class User implements UserInterface {
         this._password = valor
     }
 
-    get favourite(): Course[] {
+    get favourite(): number[] {
         return this._favourite
     }
 
@@ -65,11 +65,13 @@ export class User implements UserInterface {
         throw new Error("Method not implemented.")
     }
 
-    addFavourite(curso: Course) {
+    addFavourite(curso: number) {
         this._favourite.push(curso)
     }
 
-    // removeFavourite() {
-    //     this._favourite.splice()
-    // }
+    removeFavourite(id:number) {
+        let index: number =  this._favourite.indexOf(id)
+        this._favourite.splice(index,1)
+    }
+
 }
