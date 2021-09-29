@@ -36,7 +36,7 @@ function index() {
         })
     })
 
-    modifyFavorite()
+    modifyFavorite(document)
 }
 
 
