@@ -1,5 +1,6 @@
 import * as _ from 'lodash';
 import {render, toNumber} from "./helpers";
+import modifyFavorite from './helpers/modifyFavorite';
 import { Course } from './object/Course';
 import { Store } from './object/Store';
 import courseItem from "./views/courseItem";
@@ -35,70 +36,7 @@ function index() {
         })
     })
 
-    document.querySelectorAll('.fa-bookmark').forEach(item => {
-        item.addEventListener('click', function(){
-            let id:number = this.dataset.courseId
-            actionFavorite(id, this)
-        })
-    })
-
-    function actionFavorite(id:number, el: any) {
-        if (el.classList.contains('far')) {
-            addCourseToFavoriteList(id, el)
-        } else {
-            removeCourseToFavoriteList(id, el)
-        }
-    }
-
-    function removeCourseToFavoriteList(id: number, el: any) {
-        store.user.removeFavourite(id)
-        el.classList.replace('fas','far')
-        removeCourseToFavoriteListHTML(el)
-    }
-
-    function removeCourseToFavoriteListHTML(element: any) {
-        let b = document.getElementById('favorites')
-        b!.querySelectorAll('.js-card-course').forEach(g => {
-            if (g.getAttribute('data-course-id') == element.dataset.courseId) {
-                b?.removeChild(g)
-            }
-        })
-    }
-
-    function addCourseToFavoriteList(id: number, el: any) {
-        store.user.addFavourite(id)
-        el.classList.replace('far','fas')
-        createListfavourit()
-        let curso = store.catalog.findById(id)
-        if (curso) {
-            insertCourseToFavoriteListHTML(curso)
-        }
-    }
-
-    function isFirstCourse(): boolean {
-        return store.user.favourite.length == 1
-    }
-
-    function createListfavourit(): void {
-        if (isFirstCourse()) {
-            document.querySelector('.js-favourite-list')!.innerHTML = `
-            <h2 class="text-violet lista-title">Favorites</h2>
-            <div id="favorites" class="lista"></div>`
-        }
-    }
-
-    function insertCourseToFavoriteListHTML(curso: Course): void {
-        let listFavorite = document.getElementById('favorites')
-        listFavorite!.innerHTML += courseItem(curso)
-        listFavorite?.querySelectorAll('.fa-bookmark').forEach(item => {
-            item.classList.replace('far','fas')
-            item.addEventListener('click', function() {
-                console.log(this)
-                let id:number = this.dataset.courseId
-                actionFavorite(id, this)
-            })
-        })
-    }
+    modifyFavorite()
 }
 
 
