@@ -1,5 +1,6 @@
 import * as _ from 'lodash';
 import {render, toNumber} from "./helpers";
+import modifyFavorite from './helpers/modifyFavorite';
 import { Course } from './object/Course';
 import { Store } from './object/Store';
 import courseItem from "./views/courseItem";
@@ -24,7 +25,7 @@ function index() {
     document.querySelector('#logout')!.addEventListener('click',() => store.user.logout())
     
     let recomended: HTMLElement = document.getElementById('recomended')!
-    
+
     cursos.forEach((curso: Course) => {
         if (recomended) recomended.innerHTML += courseItem(curso)
     })
@@ -35,12 +36,8 @@ function index() {
         })
     })
 
-    document.querySelectorAll('.fa-bookmark').forEach(item => {
-        item.addEventListener('click',function(){
-            this.classList.contains('far') ? store.user.addFavourite(this.dataset.courseId) : store.user.removeFavourite(this.dataset.courseId)
-            this.classList.contains('far') ? this.classList.replace('far','fas') : this.classList.replace('fas','far')
-        })
-    })
+    modifyFavorite(document)
 }
+
 
 export default index
