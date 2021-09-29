@@ -1,7 +1,7 @@
 import index from ".";
-import detalleProducto from "./detalleProducto";
 import routerInteface from "./interface/routerInterface";
 import login from "./login";
+import productDetail from "./productDetail";
 import tableUser from "./tableUser";
 
 /**
@@ -10,7 +10,7 @@ import tableUser from "./tableUser";
 const routes: routerInteface = {
     '/': index,
     '/index.html': index,
-    '/detalleProducto.html': detalleProducto,
+    '/detalleProducto.html': productDetail,
     'login.html': login,
     '/tableUser.html': tableUser
 }
