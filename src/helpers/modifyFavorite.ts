@@ -113,7 +113,7 @@ function createListfavourit(): void {
  * @param curso is the object course
  */
 function insertCourseToFavoriteListHTML(curso: Course): void {
-    let listFavorite = document.getElementById('favorites')
+    let listFavorite = document.getElementById('favorites') as HTMLElement
     render(listFavorite,courseItem(curso))
     listFavorite?.querySelectorAll('.fa-bookmark').forEach(item => {
         changeIcon(item,'far','fas')

@@ -5,7 +5,7 @@ import headDetailCourse from "./views/headDetailCourse"
 import navbar from "./views/navbar"
 
 function detalleProducto () {
-    render(document.querySelector('.js-navbar'), navbar(store.user.username))
+    render(document.querySelector('.js-navbar') as HTMLElement, navbar(store.user.username))
     document.querySelector('.js-btn-perfil')!.addEventListener('click', function() {
         console.log(this)
         this.classList.contains('active') ? this.classList.remove('active') : this.classList.add('active')
@@ -25,8 +25,8 @@ function detalleProducto () {
 
     let course = store.catalog.findById(toNumber(localStorage.getItem('id_course')!))!
 
-    render(document.querySelector('.js-head-detail-course'), headDetailCourse(course))
-    render(document.querySelector('.js-body-detail-course'), bodyDetailCourse(course))
+    render(document.querySelector('.js-head-detail-course') as HTMLElement, headDetailCourse(course))
+    render(document.querySelector('.js-body-detail-course') as HTMLElement, bodyDetailCourse(course))
 }
 
 export default detalleProducto

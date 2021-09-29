@@ -1,6 +1,6 @@
-export function render(el: HTMLElement | null , b: string) {
+export function render(el: HTMLElement , content: string) {
     if (el) {
-        el.innerHTML += b
+        el.innerHTML += content
     }
 }
 

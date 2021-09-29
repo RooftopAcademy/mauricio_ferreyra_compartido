@@ -15,8 +15,8 @@ if (user) store.user = user
 function index() {
     let cursos: Course[] = store.catalog.all()
 
-    render(document.getElementById("inicio"), "Welcome to Geeks UI Learning Application")
-    render(document.querySelector('.js-navbar'), navbar(store.user.username))
+    render(document.getElementById("inicio") as HTMLElement, "Welcome to Geeks UI Learning Application")
+    render(document.querySelector('.js-navbar') as HTMLElement, navbar(store.user.username))
 
     document.querySelector('.js-btn-perfil')!.addEventListener('click', function() {
         this.classList.contains('active') ? this.classList.remove('active') : this.classList.add('active')

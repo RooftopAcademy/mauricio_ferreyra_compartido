@@ -6,7 +6,7 @@ import row from "./views/row";
 
 function tableUser() {
 
-    render(document.querySelector('.js-navbar'), navbar(store.user.username))
+    render(document.querySelector('.js-navbar') as HTMLElement, navbar(store.user.username))
     document.querySelector('.js-btn-perfil')!.addEventListener('click', function() {
         console.log(this)
         this.classList.contains('active') ? this.classList.remove('active') : this.classList.add('active')
