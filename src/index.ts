@@ -1,10 +1,10 @@
 import * as _ from 'lodash';
 import {render, toNumber} from "./helpers";
 import modifyFavorite from './helpers/modifyFavorite';
+import renderNavbarAndAddLogic from './helpers/renderNavbar';
 import { Course } from './object/Course';
 import { Store } from './object/Store';
 import courseItem from "./views/courseItem";
-import navbar from "./views/navbar";
 
 export let store = new Store
 store.fetchCourses();
@@ -12,32 +12,44 @@ store.fetchUsers()
 let user = store.users.findById(toNumber(localStorage.getItem('user_id')!))
 if (user) store.user = user
 
-function index() {
-    let cursos: Course[] = store.catalog.all()
+export default  function index() {
+    // obtenemos todos los cursos
+    let courses: Course[] = store.catalog.all()
 
+    renderNavbarAndAddLogic()
     render(document.getElementById("inicio") as HTMLElement, "Welcome to Geeks UI Learning Application")
-    render(document.querySelector('.js-navbar') as HTMLElement, navbar(store.user.username))
 
-    document.querySelector('.js-btn-perfil')!.addEventListener('click', function() {
-        this.classList.contains('active') ? this.classList.remove('active') : this.classList.add('active')
-    })
-
-    document.querySelector('#logout')!.addEventListener('click',() => store.user.logout())
+    insertCoursesInHTML(courses)
     
-    let recomended: HTMLElement = document.getElementById('recomended')!
-
-    cursos.forEach((curso: Course) => {
-        if (recomended) recomended.innerHTML += courseItem(curso)
-    })
-
-    document.querySelectorAll('.js-card-course').forEach(el => {
-        el.addEventListener('click', function() {
-            localStorage.setItem('id_course', this.dataset.courseId)
-        })
-    })
+    savesIdCourseInLocalStorageOnClick()
 
     modifyFavorite(document)
 }
 
 
-export default index
+/**
+ * 
+ * insert a couse card in the html recommendation list
+ * 
+ * @param courses is the list of courses
+ * 
+ */
+function insertCoursesInHTML(courses: Course[]) {
+    let recomended = document.getElementById('recomended') as HTMLElement
+    courses.forEach((curso: Course) => {
+        render(recomended,courseItem(curso))
+    })
+}
+
+/**
+ * 
+ * saves course id to local storage when this item is clicked
+ * 
+ */
+function savesIdCourseInLocalStorageOnClick() {
+    document.querySelectorAll('.js-card-course').forEach(course => {
+        course.addEventListener('click', function() {
+            localStorage.setItem('id_course', this.dataset.courseId)
+        })
+    })
+}
