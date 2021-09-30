@@ -1,8 +1,6 @@
 import {render} from "./helpers";
 import renderNavbarAndAddLogic from "./helpers/renderNavbar";
-import { store } from "./object/App";
 import alertError from "./views/alertError";
-import navbar from "./views/navbar";
 import row from "./views/row";
 
 export default function tableUser() {

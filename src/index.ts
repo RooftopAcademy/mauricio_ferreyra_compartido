@@ -1,5 +1,5 @@
 import * as _ from 'lodash';
-import {render, toNumber} from "./helpers";
+import { render } from "./helpers";
 import modifyFavorite from './helpers/modifyFavorite';
 import renderNavbarAndAddLogic from './helpers/renderNavbar';
 import { store } from './object/App';
