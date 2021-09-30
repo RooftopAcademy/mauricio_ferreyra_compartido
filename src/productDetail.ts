@@ -1,6 +1,6 @@
-import { store } from "."
 import { render, toNumber } from "./helpers"
 import renderNavbarAndAddLogic from "./helpers/renderNavbar"
+import { store } from "./object/App"
 import bodyDetailCourse from "./views/bodyDetailCourse"
 import headDetailCourse from "./views/headDetailCourse"
 

@@ -11,7 +11,7 @@ const routes: routerInteface = {
     '/': index,
     '/index.html': index,
     '/detalleProducto.html': productDetail,
-    'login.html': login,
+    '/login.html': login,
     '/tableUser.html': tableUser
 }
 

@@ -1,5 +1,5 @@
-import { store } from "."
 import { toNumber } from "./helpers"
+import { store } from "./object/App"
 
 function login() {
     // store.fetchUsers()

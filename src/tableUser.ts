@@ -1,5 +1,5 @@
-import { store } from ".";
 import {render} from "./helpers";
+import { store } from "./object/App";
 import alertError from "./views/alertError";
 import navbar from "./views/navbar";
 import row from "./views/row";

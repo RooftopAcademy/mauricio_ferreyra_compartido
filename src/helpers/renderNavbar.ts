@@ -1,5 +1,5 @@
-import { store } from "..";
 import { render } from "../helpers";
+import { store } from "../object/App";
 import navbar from "../views/navbar";
 
 export default function renderNavbarAndAddLogic () {

@@ -2,15 +2,9 @@ import * as _ from 'lodash';
 import {render, toNumber} from "./helpers";
 import modifyFavorite from './helpers/modifyFavorite';
 import renderNavbarAndAddLogic from './helpers/renderNavbar';
+import { store } from './object/App';
 import { Course } from './object/Course';
-import { Store } from './object/Store';
 import courseItem from "./views/courseItem";
-
-export let store = new Store
-store.fetchCourses();
-store.fetchUsers()
-let user = store.users.findById(toNumber(localStorage.getItem('user_id')!))
-if (user) store.user = user
 
 export default  function index() {
     // obtenemos todos los cursos
