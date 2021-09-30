@@ -1,4 +1,4 @@
-import { level } from "../interface/CourseInterface"
+import level from "../enum/LevelEnum"
 import { Catalog } from "./Catalog"
 import { Course } from "./Course"
 import { User } from "./User"

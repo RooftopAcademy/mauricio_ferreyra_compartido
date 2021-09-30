@@ -1,8 +1,10 @@
-export enum level {
-    begginer = "begginer",
-    intermediate = "intermediate",
-    advanced = "advanced"
-}
+// export enum level {
+//     begginer = "begginer",
+//     intermediate = "intermediate",
+//     advanced = "advanced"
+// }
+
+import level from "../enum/LevelEnum";
 
 export interface CourseInterface {
     _name: string
