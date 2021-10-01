@@ -1,4 +1,5 @@
 import index from ".";
+import courseVideo from "./courseVideo";
 import routerInteface from "./interface/routerInterface";
 import login from "./login";
 import productDetail from "./productDetail";
@@ -12,7 +13,8 @@ const routes: routerInteface = {
     '/index.html': index,
     '/detalleProducto.html': productDetail,
     '/login.html': login,
-    '/tableUser.html': tableUser
+    '/tableUser.html': tableUser,
+    '/courseVideo.html': courseVideo
 }
 
 /**
