@@ -1,35 +1,29 @@
-import { store } from ".";
 import {render} from "./helpers";
+import renderNavbarAndAddLogic from "./helpers/renderNavbar";
 import alertError from "./views/alertError";
-import navbar from "./views/navbar";
 import row from "./views/row";
 
-function tableUser() {
+export default function tableUser() {
 
-    render(document.querySelector('.js-navbar') as HTMLElement, navbar(store.user.username))
-    document.querySelector('.js-btn-perfil')!.addEventListener('click', function() {
-        console.log(this)
-        this.classList.contains('active') ? this.classList.remove('active') : this.classList.add('active')
-    })
-    document.querySelector('#logout')!.addEventListener('click',() => store.user.logout())
+    renderNavbarAndAddLogic()
 
-    let tabla = document.querySelector('.js-tbody')
-    let msgErr = document.querySelector('.js-msg-error')
-    
-    function getUsers(): void {
-        fetch('https://jsonplaceholder.typicode.com/users')
-        .then((res) => res.json())
-        .then(json => json.forEach((user: {id: number, username: string, name: string, email: string}) => {
-            if (tabla) tabla.innerHTML += row(user)
-        }))
-        .catch(err =>  { if (msgErr) msgErr.innerHTML = alertError()})
-    }
-    
-    async function fetching() {
-        await getUsers()
-    }
-    
     fetching()
 }
 
-export default tableUser
+/**
+ * 
+ * query in api to bring users
+ * 
+ */
+function getUsers(): void {
+    let tabla = document.querySelector('.js-tbody') as HTMLElement
+    let msgErr = document.querySelector('.js-msg-error') as HTMLElement
+    fetch('https://jsonplaceholder.typicode.com/users')
+    .then((res) => res.json())
+    .then(json => json.forEach((user: {id: number, username: string, name: string, email: string}) => render(tabla,row(user))))
+    .catch(_ => render(msgErr,alertError()))
+}
+
+async function fetching() {
+    await getUsers()
+}

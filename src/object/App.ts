@@ -1,25 +1,12 @@
 import * as _ from 'lodash';
-import index, { store } from "..";
-import detalleProducto from '../detalleProducto';
-import login from '../login';
-import tableUser from '../tableUser';
+import { toNumber } from '../helpers';
+import router from '../router';
+import { Store } from './Store';
 
-(function App(path: string) {
-    switch (path) {
-        case '/':
-            index()
-            break;
-        case '/index.html':
-            index()
-            break;
-        case '/detalleProducto.html':
-            detalleProducto()
-            break;
-        case '/login.html':
-            login()
-            break;
-        case '/tableUser.html':
-            tableUser()
-            break;
-    }
-})(window.location.pathname)
+export let store = new Store
+store.fetchCourses();
+store.fetchUsers()
+let user = store.users.findById(toNumber(localStorage.getItem('user_id')!))
+if (user) store.user = user
+
+router(window.location.pathname)

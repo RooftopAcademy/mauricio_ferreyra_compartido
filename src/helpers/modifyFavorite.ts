@@ -1,5 +1,5 @@
-import { store } from ".."
 import { render } from "../helpers"
+import { store } from "../object/App"
 import { Course } from "../object/Course"
 import courseItem from "../views/courseItem"
 

@@ -1,5 +1,3 @@
-import { Course } from "./Course"
-
 export class User implements UserInterface {
     
     private _id!: number

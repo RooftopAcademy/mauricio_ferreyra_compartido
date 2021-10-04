@@ -1,4 +1,5 @@
-import { CourseInterface, level } from "../interface/CourseInterface"
+import level from "../enum/LevelEnum"
+import { CourseInterface } from "../interface/CourseInterface"
 
 export class Course implements CourseInterface {
     private _id!: number
