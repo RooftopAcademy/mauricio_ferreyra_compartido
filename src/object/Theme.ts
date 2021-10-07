@@ -9,12 +9,20 @@ export default class Theme {
         this._id = value
     }
 
+    get id(): number {
+        return this._id
+    }
+
     set name(value: string) {
         this._name = value
     }
 
     get name(): string {
         return this._name
+    }
+
+    get videoList() {
+        return this._videoList
     }
 
     add(video: Video) {

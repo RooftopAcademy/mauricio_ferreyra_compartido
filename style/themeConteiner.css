@@ -18,9 +18,7 @@
     color: #5e3fcb;
     cursor: pointer;
 }
-.theme-conteiner-item.active ~ .theme-conteiner-item-subitem {
-    display: block;
-}
+
 
 .theme-conteiner-item {
     font-weight: 500;
@@ -33,7 +31,9 @@
     display: none;
 
 }
-
+.theme-conteiner-item.active ~ .theme-conteiner-item-subitem {
+    display: block;
+}
 .theme-conteiner-subitem-play {
     display: flex;
     align-items: center;

@@ -41,17 +41,17 @@ let dataCourse:elementProduct[] = [
                 name: "Python Beggining",
                 video: [
                     {
-                        id: 1,
+                        id: 4,
                         name: "Introduction",
                         url: "https://www.youtube.com/embed/chPhlsHoEPo"
                     },
                     {
-                        id: 2,
+                        id: 5,
                         name: "Variable with Python",
                         url: "https://www.youtube.com/embed/chPhlsHoEPo"
                     },
                     {
-                        id: 3,
+                        id: 6,
                         name: "Hello world Project from GitHub",
                         url: "https://www.youtube.com/embed/chPhlsHoEPo"
                     },
@@ -71,7 +71,7 @@ let dataCourse:elementProduct[] = [
                 name: "tema1",
                 video: [
                     {
-                        id: 1,
+                        id: 7,
                         name: "video",
                         url: "video"
                     }
@@ -91,7 +91,7 @@ let dataCourse:elementProduct[] = [
                 name: "tema1",
                 video: [
                     {
-                        id: 1,
+                        id: 8,
                         name: "video",
                         url: "video"
                     }
@@ -111,7 +111,7 @@ let dataCourse:elementProduct[] = [
                 name: "tema1",
                 video: [
                     {
-                        id: 1,
+                        id: 9,
                         name: "video",
                         url: "video"
                     }

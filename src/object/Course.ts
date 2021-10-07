@@ -115,6 +115,10 @@ export class Course implements CourseInterface {
         return this._name_tutor
     }
 
+    get themes() {
+        return this._themes
+    }
+
     addTheme(theme: Theme) {
         this._themes.push(theme)
     }
