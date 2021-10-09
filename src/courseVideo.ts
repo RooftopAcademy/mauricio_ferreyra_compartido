@@ -16,7 +16,8 @@ export default function courseVideo() {
 
     renderListVideos(course, document.querySelector('.js-conteiner-list-videos') as HTMLElement)
 
-    toggleDropdownListOnClick(document.querySelectorAll('.theme-conteiner-item'))
+    let conteinerTheme = document.querySelectorAll('.theme-conteiner-item')
+    toggleDropdownListOnClick(conteinerTheme)
 
     addEventClickLinkVideo(document.querySelectorAll('.js-link-video'))
 
@@ -25,4 +26,10 @@ export default function courseVideo() {
     let video = theme.findVideoById(toNumber(localStorage.getItem('id_video')!)) as Video
 
     render(conteinerVideo, videoView(video))
+
+    conteinerTheme.forEach(item => {
+        if (toNumber(item.getAttribute('data-theme-id')!) == theme.id) {
+            item.classList.add('active')
+        }
+    })
 }

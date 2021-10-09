@@ -3,7 +3,7 @@ import Theme from "../object/Theme";
 export default function conteinerThemeVideo (theme: Theme) {
     return `
     <li class="theme-conteiner-list line">
-        <a class="theme-conteiner-item text-violet" href="">${theme.name}
+        <a class="theme-conteiner-item text-violet" data-theme-id="${theme.id}" href="">${theme.name}
             <i class="fas fa-chevron-down"></i>
         </a>
         
