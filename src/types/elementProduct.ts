@@ -19,7 +19,8 @@ type elementProduct = {
         video: {
             id: number,
             name: string,
-            url: string
+            url: string,
+            duration: string
         }[]
     }[]
 }
