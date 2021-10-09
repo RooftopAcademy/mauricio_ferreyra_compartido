@@ -45,7 +45,6 @@ function removeCourseToFavoriteList(id: number, el: any) {
  * @param newClass is the valor of the new class
  */
 function changeIcon(elemento:Element, oldClass: string, newClass: string) {
-    console.log('aa')
     elemento.classList.replace(oldClass,newClass)
 }
 

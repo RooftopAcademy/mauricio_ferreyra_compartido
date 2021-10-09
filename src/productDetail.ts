@@ -1,4 +1,5 @@
 import { render, toNumber } from "./helpers"
+import addEventClickLinkVideo from "./helpers/addEventClickLinkVideo"
 import renderListVideos from "./helpers/renderListVideos"
 import renderNavbarAndAddLogic from "./helpers/renderNavbar"
 import toggleDropdownListOnClick from "./helpers/toggleDropdownListOnClick"
@@ -28,21 +29,5 @@ export default function productDetail () {
 
     toggleDropdownListOnClick(document.querySelectorAll('.theme-conteiner-item'))
 
-    addEventClickLinkVideo()
-}
-
-
-/**
- * 
- * add the event to go to courseVideo.html
- * and save in the localstorage the video id
- * 
- */
-function addEventClickLinkVideo() {
-    let links = document.querySelectorAll('.js-link-video')
-    links.forEach(link => {
-        link.addEventListener('click', function(e) {
-            localStorage.setItem('id_video', this.dataset.videoId)
-        })
-    })
+    addEventClickLinkVideo(document.querySelectorAll('.js-link-video'))
 }

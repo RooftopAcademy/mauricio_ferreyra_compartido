@@ -123,4 +123,8 @@ export class Course implements CourseInterface {
         this._themes.push(theme)
     }
 
+    findThemeById(id: number) {
+        return this._themes.find(theme => theme.id == id)
+    }
+
 }

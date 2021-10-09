@@ -28,4 +28,8 @@ export default class Theme {
     add(video: Video) {
         this._videoList.push(video)
     }
+
+    findVideoById(id: number) {
+        return this._videoList.find(video => video.id == id)
+    }
 }
