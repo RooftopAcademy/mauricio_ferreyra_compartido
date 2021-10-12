@@ -2,7 +2,7 @@ import { Course } from "../object/Course"
 
 function courseItem(curso: Course): string {
     return `
-    <a class="" href="./detalleProducto.html">
+    <a class="" href="./detalleProduct">
         <div class="card js-card-course" data-course-id="${curso.id}">
             <div>
                 <img class="img-card" src="${curso.image}" alt="">

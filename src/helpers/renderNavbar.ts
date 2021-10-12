@@ -6,7 +6,7 @@ export default function renderNavbarAndAddLogic () {
     /**
      * render the navbar
      */
-    render(document.querySelector('.js-navbar') as HTMLElement, navbar(store.user.username))
+    render(document.querySelector('.js-navbar') as HTMLElement, navbar())
 
     /**
      * togle button profile of menu
