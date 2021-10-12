@@ -1,6 +1,15 @@
 const http = require('http')
 const fs = require('fs')
 
+const express = {
+    html: function (res, path){
+        let content = fs.readFileSync(path)
+        res.writeHead(200, {
+            'Content-Type' : 'text/html'
+        })
+        res.write(content)
+    }
+}
 
 http.createServer((req, res) => {
 
@@ -15,44 +24,25 @@ http.createServer((req, res) => {
     }
 
     if (req.url == '/') {
-        let content = fs.readFileSync('./index.html')
-        res.writeHead(200, {
-            'Content-Type' : 'text/html'
-        })
-        res.write(content)
+        express.html(res,'./index.html')
     }
 
     if (req.url == '/detalleProduct') {
-        let content = fs.readFileSync('./detalleProducto.html')
-        res.writeHead(200, {
-            'Content-Type' : 'text/html'
-        })
-        res.write(content)
+        express.html(res,'./detalleProducto.html')
     }
 
     if (req.url == '/login') {
-        let content = fs.readFileSync('./login.html')
-        res.writeHead(200, {
-            'Content-Type' : 'text/html'
-        })
-        res.write(content)
+        express.html('./login.html')
     }
 
     if (req.url == '/tableUser') {
-        let content = fs.readFileSync('./tableUser.html')
-        res.writeHead(200, {
-            'Content-Type' : 'text/html'
-        })
-        res.write(content)
+        express.html(res,'./tableUser.html')
     }
 
     if (req.url == '/courseVideo') {
-        let content = fs.readFileSync('./courseVideo.html')
-        res.writeHead(200, {
-            'Content-Type' : 'text/html'
-        })
-        res.write(content)
+        express.html(res,'./courseVideo.html')
     }
+    
 
     res.end()
 }).listen(4444)
