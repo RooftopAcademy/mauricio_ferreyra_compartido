@@ -282,7 +282,7 @@ let dataCourse:elementProduct[] = [
         duration: '3h 56m', level: level.begginer, 
         points: 4.5, views: 7700, photo_tutor: foto, name_tutor: 'Morris Mccoy', 
         description: 'React is an open source Javascript library designed to create user interfaces with the aim of facilitating application development on a single page.', 
-        image: react, languaje: 'React', price: 600,
+        image: react, languaje: 'React', price: 400,
         theme: [
             {
                 id: 1,
@@ -579,7 +579,7 @@ let dataCourse:elementProduct[] = [
         duration: '2h 46m', level: level.begginer, 
         points: 4.5, views: 9300, photo_tutor: foto, name_tutor: 'Ted Hawkins', 
         description: '​GraphQL is a data manipulation and query language for APIs, and a runtime environment for querying existing data.', 
-        image: graphQl, languaje: 'GraphQL', price: 600,
+        image: graphQl, languaje: 'GraphQL', price: 700,
         theme: [
             {
                 id: 1,
@@ -756,7 +756,7 @@ let dataCourse:elementProduct[] = [
         duration: '1h 30m', level: level.begginer, 
         points: 4.5, views: 8890, photo_tutor: foto, name_tutor: 'Claire Robertson', 
         description: 'Angular is a web application framework developed in TypeScript, open source, maintained by Google, used to create and maintain single page web applications.', 
-        image: angular, languaje: 'Angular', price: 600,
+        image: angular, languaje: 'Angular', price: 650,
         theme: [
             {
                 id: 1,
