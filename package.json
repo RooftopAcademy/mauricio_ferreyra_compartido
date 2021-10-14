@@ -4,6 +4,7 @@
   "description": "* Quiero una tienda de cursos <br>\r * Que los usuarios puedan ver un listado de cursos\r * Que puedan ver los videos de los cursos\r * Que puedan guardar el curso\r * Que puedan puntuar\r * Que los usuarios puedan logearse y cerrar sesion",
   "main": "webpack.config.js",
   "dependencies": {
+    "express": "^4.17.1",
     "webpack": "^5.54.0",
     "webpack-cli": "^4.8.0"
   },
