@@ -30,5 +30,4 @@ app.listen(8000)
  * renombrar mi carpeta views por component
  * crear una carpeta views en src para poner los html
  * mover el archivo serve a src y crear un npm start en node.. min 46:00 del profe
- * 
  */
