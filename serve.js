@@ -1,5 +1,10 @@
 const express = require('express')
 const app = express()
+const dotenv = require('dotenv')
+
+const courses = require('./src/data/courses.json')
+
+dotenv.config()
 
 app.use(express.static('public'))
 
@@ -23,11 +28,8 @@ app.get('/courseVideo', (req, res) => {
     res.sendFile(__dirname + '/courseVideo.html')
 })
 
-app.listen(8000)
+app.get('/api/courses', (req, res) => {
+    res.json(courses)
+})
 
-
-/**
- * renombrar mi carpeta views por component
- * crear una carpeta views en src para poner los html
- * mover el archivo serve a src y crear un npm start en node.. min 46:00 del profe
- */
+app.listen(process.env.PORT)

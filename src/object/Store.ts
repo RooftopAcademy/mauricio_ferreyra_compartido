@@ -1,4 +1,4 @@
-import dataCourse from "../helpers/coursesData"
+import level from "../enum/LevelEnum"
 import elementProduct from "../types/elementProduct"
 import { Catalog } from "./Catalog"
 import { Course } from "./Course"
@@ -56,41 +56,46 @@ export class Store {
 
     }
 
-    fetchCourses(): void {
+    async fetchCourses() {
 
-        dataCourse.forEach((item: elementProduct) => {
-            let curso: Course = new Course
-            curso.id = item.id
-            curso.name = item.name
-            curso.duration = item.duration
-            curso.level = item.level
-            curso.points = item.points
-            curso.views = item.views
-            curso.photo_tutor = item.photo_tutor
-            curso.name_tutor = item.name_tutor
-            curso.description = item.description
-            curso.image = item.image
-            curso.lenguaje = item.languaje
-            curso.price = item.price
-
-
-            item.theme.forEach(element => {
-                let theme: Theme = new Theme
-                theme.id = element.id
-                theme.name = element.name
-                element.video.forEach(itemVideo => {
-                    let video = new Video
-                    video.id = itemVideo.id
-                    video.name = itemVideo.name
-                    video.video = itemVideo.url
-
-                    theme.add(video)
+        await fetch('http://localhost:8000/api/courses')
+        .then(res => res.json())
+        .then((json) => {
+            console.log(json)
+            json.forEach((item: elementProduct) => {
+                let curso: Course = new Course
+                curso.id = item.id
+                curso.name = item.name
+                curso.duration = item.duration
+                curso.level = level[item.level]
+                curso.points = item.points
+                curso.views = item.views
+                curso.photo_tutor = item.photo_tutor
+                curso.name_tutor = item.name_tutor
+                curso.description = item.description
+                curso.image = item.image
+                curso.lenguaje = item.languaje
+                curso.price = item.price
+    
+    
+                item.theme.forEach(element => {
+                    let theme: Theme = new Theme
+                    theme.id = element.id
+                    theme.name = element.name
+                    element.video.forEach(itemVideo => {
+                        let video = new Video
+                        video.id = itemVideo.id
+                        video.name = itemVideo.name
+                        video.video = itemVideo.url
+    
+                        theme.add(video)
+                    })
+                    curso.addTheme(theme)
                 })
-                curso.addTheme(theme)
+    
+                this._catalog.add(curso)
             })
-
-            this._catalog.add(curso)
-
         })
     }
+
 }
