@@ -22,7 +22,7 @@ export default function login() {
              */
             if (user.login(username.value, password.value) != undefined) {
                 localStorage.setItem('user_id', user.login(username.value, password.value)?.toString()!)
-                window.location.href = "/index.html"
+                window.location.href = "/"
             }
         })
         menssageError?.classList.add('active')

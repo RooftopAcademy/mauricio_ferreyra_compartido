@@ -18,6 +18,9 @@ export default  function index() {
     savesIdCourseInLocalStorageOnClick()
 
     modifyFavorite(document)
+
+    let a = store.catalog.sortByKey('_price')
+    console.log(a)
 }
 
 

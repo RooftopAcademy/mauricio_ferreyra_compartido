@@ -10,11 +10,11 @@ import tableUser from "./tableUser";
  */
 const routes: routerInteface = {
     '/': index,
-    '/index.html': index,
-    '/detalleProducto.html': productDetail,
-    '/login.html': login,
-    '/tableUser.html': tableUser,
-    '/courseVideo.html': courseVideo
+    '/index': index,
+    '/detalleProduct': productDetail,
+    '/login': login,
+    '/tableUser': tableUser,
+    '/courseVideo': courseVideo
 }
 
 /**

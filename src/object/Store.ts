@@ -1,4 +1,3 @@
-import level from "../enum/LevelEnum"
 import dataCourse from "../helpers/coursesData"
 import elementProduct from "../types/elementProduct"
 import { Catalog } from "./Catalog"
