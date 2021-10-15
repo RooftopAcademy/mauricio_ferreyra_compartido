@@ -1,48 +1,33 @@
-const http = require('http')
-const fs = require('fs')
+const express = require('express')
+const app = express()
 
-const express = {
-    html: function (res, path){
-        let content = fs.readFileSync(path)
-        res.writeHead(200, {
-            'Content-Type' : 'text/html'
-        })
-        res.write(content)
-    }
-}
+app.use(express.static('public'))
 
-http.createServer((req, res) => {
+app.get('/', (req, res) => {
+    res.sendFile(__dirname + '/index.html')
+})
 
-    if (req.url == '/dist/bundle.js') {
-        let content = fs.readFileSync('./' + req.url)
-        res.write(content)
-    }
+app.get('/detalleProduct', (req, res) => {
+    res.sendFile(__dirname + '/detalleProducto.html')
+})
 
-    if (req.url.includes('.css')) {
-        let content = fs.readFileSync('./' + req.url)
-        res.write(content)
-    }
+app.get('/login', (req, res) => {
+    res.sendFile(__dirname + '/login.html')
+})
 
-    if (req.url == '/') {
-        express.html(res,'./index.html')
-    }
+app.get('/tableUser', (req, res) => {
+    res.sendFile(__dirname + '/tableUser.html')
+})
 
-    if (req.url == '/detalleProduct') {
-        express.html(res,'./detalleProducto.html')
-    }
+app.get('/courseVideo', (req, res) => {
+    res.sendFile(__dirname + '/courseVideo.html')
+})
 
-    if (req.url == '/login') {
-        express.html('./login.html')
-    }
+app.listen(8000)
 
-    if (req.url == '/tableUser') {
-        express.html(res,'./tableUser.html')
-    }
 
-    if (req.url == '/courseVideo') {
-        express.html(res,'./courseVideo.html')
-    }
-    
-
-    res.end()
-}).listen(4444)
+/**
+ * renombrar mi carpeta views por component
+ * crear una carpeta views en src para poner los html
+ * mover el archivo serve a src y crear un npm start en node.. min 46:00 del profe
+ */

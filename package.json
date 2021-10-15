@@ -4,16 +4,19 @@
   "description": "* Quiero una tienda de cursos <br>\r * Que los usuarios puedan ver un listado de cursos\r * Que puedan ver los videos de los cursos\r * Que puedan guardar el curso\r * Que puedan puntuar\r * Que los usuarios puedan logearse y cerrar sesion",
   "main": "webpack.config.js",
   "dependencies": {
+    "express": "^4.17.1",
     "webpack": "^5.54.0",
     "webpack-cli": "^4.8.0"
   },
   "devDependencies": {
     "@types/lodash": "^4.14.173",
+    "nodemon": "^2.0.13",
     "ts-loader": "^9.2.6",
     "typescript": "^4.4.3"
   },
   "scripts": {
     "build": "webpack",
+    "start": "nodemon serve.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
