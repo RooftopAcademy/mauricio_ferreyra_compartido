@@ -4,9 +4,13 @@ import router from '../router';
 import { Store } from './Store';
 
 export let store = new Store
-store.fetchCourses();
-store.fetchUsers()
-let user = store.users.findById(toNumber(localStorage.getItem('user_id')!))
-if (user) store.user = user
 
-router(window.location.pathname)
+async function iniciar () {
+    await store.fetchCourses()
+    await store.fetchUsers()
+    let user = store.users.findById(toNumber(localStorage.getItem('user_id')!))
+    if (user) store.user = user
+    router(window.location.pathname)
+}
+
+iniciar()

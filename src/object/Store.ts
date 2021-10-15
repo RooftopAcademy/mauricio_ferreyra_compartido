@@ -1,4 +1,4 @@
-import dataCourse from "../helpers/coursesData"
+import level from "../enum/LevelEnum"
 import elementProduct from "../types/elementProduct"
 import { Catalog } from "./Catalog"
 import { Course } from "./Course"
@@ -37,60 +37,64 @@ export class Store {
         this._iniciado = valor
     }
     
-    fetchUsers() {
-        let data: {id: number, username: string, password: string, state: boolean}[]  = [
-            {id: 1, username: 'usuario', password: '123456', state: false},
-            {id: 2, username: 'mauricio', password: '123456', state: false},
-            {id: 3, username: 'josejuan', password: '123456', state: false},
-        ]
+    async fetchUsers() {
 
-        data.forEach((el: {id: number, username: string, password: string, state: boolean}) => {
-            let user = new User
-            user.id = el.id
-            user.username = el.username
-            user.password = el.password
-            user.state = el.state
+        await fetch('http://localhost:8000/api/users')
+        .then(res => res.json())
+        .then((json) => {
+            json.forEach((el: {id: number, username: string, password: string, state: boolean}) => {
+                let user = new User
+                user.id = el.id
+                user.username = el.username
+                user.password = el.password
+                user.state = el.state
 
-            this._users.add(user)
-        })
-
-    }
-
-    fetchCourses(): void {
-
-        dataCourse.forEach((item: elementProduct) => {
-            let curso: Course = new Course
-            curso.id = item.id
-            curso.name = item.name
-            curso.duration = item.duration
-            curso.level = item.level
-            curso.points = item.points
-            curso.views = item.views
-            curso.photo_tutor = item.photo_tutor
-            curso.name_tutor = item.name_tutor
-            curso.description = item.description
-            curso.image = item.image
-            curso.lenguaje = item.languaje
-            curso.price = item.price
-
-
-            item.theme.forEach(element => {
-                let theme: Theme = new Theme
-                theme.id = element.id
-                theme.name = element.name
-                element.video.forEach(itemVideo => {
-                    let video = new Video
-                    video.id = itemVideo.id
-                    video.name = itemVideo.name
-                    video.video = itemVideo.url
-
-                    theme.add(video)
-                })
-                curso.addTheme(theme)
+                this._users.add(user)
             })
+        })
 
-            this._catalog.add(curso)
+    }
 
+    async fetchCourses() {
+
+        await fetch('http://localhost:8000/api/courses')
+        .then(res => res.json())
+        .then((json) => {
+            console.log(json)
+            json.forEach((item: elementProduct) => {
+                let curso: Course = new Course
+                curso.id = item.id
+                curso.name = item.name
+                curso.duration = item.duration
+                curso.level = level[item.level]
+                curso.points = item.points
+                curso.views = item.views
+                curso.photo_tutor = item.photo_tutor
+                curso.name_tutor = item.name_tutor
+                curso.description = item.description
+                curso.image = item.image
+                curso.lenguaje = item.languaje
+                curso.price = item.price
+    
+    
+                item.theme.forEach(element => {
+                    let theme: Theme = new Theme
+                    theme.id = element.id
+                    theme.name = element.name
+                    element.video.forEach(itemVideo => {
+                        let video = new Video
+                        video.id = itemVideo.id
+                        video.name = itemVideo.name
+                        video.video = itemVideo.url
+    
+                        theme.add(video)
+                    })
+                    curso.addTheme(theme)
+                })
+    
+                this._catalog.add(curso)
+            })
         })
     }
+
 }
