@@ -1,5 +1,8 @@
 import { render, toNumber } from "./helpers"
+import addEventClickLinkVideo from "./helpers/addEventClickLinkVideo"
+import renderListVideos from "./helpers/renderListVideos"
 import renderNavbarAndAddLogic from "./helpers/renderNavbar"
+import toggleDropdownListOnClick from "./helpers/toggleDropdownListOnClick"
 import { store } from "./object/App"
 import bodyDetailCourse from "./views/bodyDetailCourse"
 import headDetailCourse from "./views/headDetailCourse"
@@ -11,8 +14,6 @@ export default function productDetail () {
 
     renderNavbarAndAddLogic()
 
-    toggleDropdownListOnClick()
-
     /**
      * get course id in local storage
      */
@@ -23,23 +24,10 @@ export default function productDetail () {
      */
     render(document.querySelector('.js-head-detail-course') as HTMLElement, headDetailCourse(course))
     render(document.querySelector('.js-body-detail-course') as HTMLElement, bodyDetailCourse(course))
-}
 
-/**
- * 
- * change the display state of course topics
- * drop dow list
- * 
- */
-function toggleDropdownListOnClick () {
-    let themes = document.querySelectorAll('.theme-conteiner-item')
-    themes.forEach(theme => {
-        theme.addEventListener('click', function(e) {
-            e.preventDefault()
-            themes.forEach(element => {
-                if (element != theme) { element.classList.remove('active') }
-            })
-            theme.classList.contains('active') ? theme.classList.remove('active') : theme.classList.add('active')
-        })
-    })
+    renderListVideos(course, document.querySelector('.js-conteiner-list-videos') as HTMLElement)
+
+    toggleDropdownListOnClick(document.querySelectorAll('.theme-conteiner-item'))
+
+    addEventClickLinkVideo(document.querySelectorAll('.js-link-video'))
 }

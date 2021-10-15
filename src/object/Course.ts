@@ -1,5 +1,7 @@
 import level from "../enum/LevelEnum"
 import { CourseInterface } from "../interface/CourseInterface"
+import Theme from "./Theme"
+import Video from "./Video"
 
 export class Course implements CourseInterface {
     private _id!: number
@@ -15,6 +17,7 @@ export class Course implements CourseInterface {
     private _video!: Video
     private _photo_tutor!: string
     private _name_tutor!: string
+    private _themes: Theme[] = []
 
     set id(value:number) {
         this._id = value
@@ -110,6 +113,18 @@ export class Course implements CourseInterface {
 
     get name_tutor(): string {
         return this._name_tutor
+    }
+
+    get themes() {
+        return this._themes
+    }
+
+    addTheme(theme: Theme) {
+        this._themes.push(theme)
+    }
+
+    findThemeById(id: number) {
+        return this._themes.find(theme => theme.id == id)
     }
 
 }
