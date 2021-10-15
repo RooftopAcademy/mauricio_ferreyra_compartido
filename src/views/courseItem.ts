@@ -28,7 +28,11 @@ function courseItem(curso: Course): string {
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
                         ${curso.points}
-                    </span> <p class="text-Light-purple" style="margin-top: 15px;">(${curso.views})</p>        
+                    </span>
+                    <div style="display: flex; justify-content: space-between; margin-top: 15px;">
+                        <p class="text-Light-purple">(${curso.views})</p>
+                        <p>$${curso.price}</p>
+                    </div>      
                 </div>
             </div>
             <div class="card-footer">
