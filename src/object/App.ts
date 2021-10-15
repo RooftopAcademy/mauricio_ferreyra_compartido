@@ -7,7 +7,7 @@ export let store = new Store
 
 async function iniciar () {
     await store.fetchCourses()
-    store.fetchUsers()
+    await store.fetchUsers()
     let user = store.users.findById(toNumber(localStorage.getItem('user_id')!))
     if (user) store.user = user
     router(window.location.pathname)

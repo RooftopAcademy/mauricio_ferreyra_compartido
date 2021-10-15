@@ -3,6 +3,7 @@ const app = express()
 const dotenv = require('dotenv')
 
 const courses = require('./src/data/courses.json')
+const users = require('./src/data/users.json')
 
 dotenv.config()
 
@@ -28,8 +29,17 @@ app.get('/courseVideo', (req, res) => {
     res.sendFile(__dirname + '/courseVideo.html')
 })
 
+/**
+ * 
+ * return the json courses
+ * 
+ */
 app.get('/api/courses', (req, res) => {
     res.json(courses)
+})
+
+app.get('/api/users', (req, res) => {
+    res.json(users)
 })
 
 app.listen(process.env.PORT)

@@ -37,21 +37,20 @@ export class Store {
         this._iniciado = valor
     }
     
-    fetchUsers() {
-        let data: {id: number, username: string, password: string, state: boolean}[]  = [
-            {id: 1, username: 'usuario', password: '123456', state: false},
-            {id: 2, username: 'mauricio', password: '123456', state: false},
-            {id: 3, username: 'josejuan', password: '123456', state: false},
-        ]
+    async fetchUsers() {
 
-        data.forEach((el: {id: number, username: string, password: string, state: boolean}) => {
-            let user = new User
-            user.id = el.id
-            user.username = el.username
-            user.password = el.password
-            user.state = el.state
+        await fetch('http://localhost:8000/api/users')
+        .then(res => res.json())
+        .then((json) => {
+            json.forEach((el: {id: number, username: string, password: string, state: boolean}) => {
+                let user = new User
+                user.id = el.id
+                user.username = el.username
+                user.password = el.password
+                user.state = el.state
 
-            this._users.add(user)
+                this._users.add(user)
+            })
         })
 
     }
